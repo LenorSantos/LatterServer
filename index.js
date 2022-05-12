@@ -13,11 +13,11 @@ app.use(fileupload());
 
 // seus dados do sql
 const con = mysql.createConnection({
-  host: "",
-  port: "",
-  user: "",
-  password: "",
-  database: ""
+  host: "sql10.freesqldatabase.com",
+  port: "3306",
+  user: "sql10491724",
+  password: "ihaLKXwlkv",
+  database: "sql10491724"
 });
 
 // toppage
