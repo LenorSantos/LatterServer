@@ -1,6 +1,4 @@
-// tem alguns logs mas foi para testar no momento, nao tem necessidade
-
-//nesse eu uso mysql2
+//eu uso mysql2
 const express = require("express");
 const app = express();
 const fileupload = require('express-fileupload');
@@ -29,9 +27,6 @@ app.post("/toppage", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log("dados inseridos toppage");
-      console.log(hora);
-      console.log(data);
       return res.send(result);
     }
   });
@@ -42,7 +37,6 @@ app.get("/pushtoppage", function (req, res) {
     if (err) {
       console.log(err);
     } else {
-      console.log("dados requisitados toppage");
       res.send(result);
     }
   });
@@ -63,7 +57,6 @@ app.post("/insert", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log("dados inseridos promo");
       return res.send(result);
     }
   });
@@ -81,7 +74,6 @@ app.get("/push", function (req, res) {
     if (err) {
       console.log(err);
     } else {
-      console.log("dados requisitados promo");
       res.send(result);
     }
   });
@@ -93,7 +85,6 @@ app.delete("/delete/:id", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log("dados apagados promo");
       res.send(result);
     }
   });
@@ -110,7 +101,6 @@ app.post("/destaques", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log("dados inseridos destaques");
       return res.send(result);
     }
   });
@@ -128,7 +118,6 @@ app.get("/pushdestaques", function (req, res) {
     if (err) {
       console.log(err);
     } else {
-      console.log("dados requisitados destaques");
       res.send(result);
     }
   });
@@ -140,7 +129,6 @@ app.delete("/deldestaques/:id", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      console.log("dados apagados destaques");
       res.send(result);
     }
   });
@@ -149,5 +137,5 @@ app.delete("/deldestaques/:id", (req, res) => {
 
 // abre porta
 app.listen(3001, () => {
-  console.log("Yey, your server is running on port 3001");
+  console.log("Server is running on port 3001");
 });
